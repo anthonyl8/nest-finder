@@ -1,0 +1,124 @@
+<html>
+  <head>
+    <title>
+      Nest Finder
+    </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;600;700;800&family=Jersey+25&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+      p {
+        font-family: Abhaya Libre, Arial, sans-serif;
+      }
+
+      .image-container {
+        position: relative;
+        display: inline-block;
+        margin-bottom: 20px;
+      }
+
+      .image-container img {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+
+      .nest-finder-overlaid {
+        position: absolute;
+        top: 50%; 
+        left: 50%; 
+        transform: translate(-50%, -50%); 
+        background-color: rgba(0, 0, 0, 0); 
+        color: #fff; 
+        padding: 10px 20px;
+        font-family: Jersey;
+        font-size: 70px; 
+        font-weight: bold;
+        text-align: center;
+      }
+
+      .sub-title {
+        font-size: 30px;
+        display: block;
+        text-align: center;
+        margin-bottom: 15px;
+      }
+
+      .join-buttons {
+        width: 730px;
+        display: block;
+        margin: 0 auto;
+      }
+
+      .join-button {
+        border-radius: 30px;
+        font-size: 24px;
+        width: 350px;
+        height: 60px;
+        cursor: pointer;
+      }
+
+      #sign-up {
+        background-image: linear-gradient(to right, #8AE7A9, #63BBA9);
+        border-style: none;
+        color: white;
+        transition: opacity 0.15s;
+        margin-right: 20px;
+      }
+
+      #sign-up:hover {
+        opacity: 0.8;
+      }
+
+      #sign-up:active {
+        opacity: 0.6;
+      }
+
+      #log-in {
+        border-style: solid;
+        border-color: black;
+        border-width: 1px;
+        background-color: white;
+        transition: background-color 0.15s,
+        color 0.15s,
+        opacity 0.15s;
+      }
+
+      #log-in:hover {
+        background-color: black;
+        color: white;
+      }
+
+      #log-in:active {
+        opacity: 0.7;
+      }
+
+      .heading {
+        margin-top: 35px;
+        margin-bottom: 25px;
+        font-size: 60px;
+        text-align: center;
+      }
+
+      .why-us {
+        display: grid;
+        width: 75%;
+        grid-template-columns: 1fr 1fr 1fr;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="image-container">
+      <img src = "images/apartment-view.png" class="apartment-view">
+      <div class="nest-finder-overlaid">NestFinder</div>
+    </div>
+    <p class="sub-title">the &#35;1 place to find student housing</p>
+    <div class="join-buttons">
+      <button class="join-button" id="sign-up">Try Nest Finder for Free</button>
+      <button class="join-button" id="log-in">Have an account?</button>
+    </div>
+    <p class="heading">Finding Housing as a Student is Tough.</p>
+    <div class="why-us">
+    </div>
+  </body>
+</html>
