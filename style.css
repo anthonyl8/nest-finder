@@ -240,7 +240,8 @@ padding-right: 40px;
 
 
 .icon {
-  width: 100px;
+  width: 75px;
+  filter: invert(100%);
   display: block;
 }
 .reason-title {
@@ -391,6 +392,7 @@ font-family: Abhaya Libre, Arial, sans-serif;
 .footer-icons {
   display: flex;
   gap: 15px;
+  margin-top: 15px;
 }
 
 .footer-icons .icon {
