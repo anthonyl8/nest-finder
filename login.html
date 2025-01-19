@@ -78,6 +78,28 @@
         margin-top: 0;
         text-align: center;
       }
+
+      .submit-button {
+        border-radius: 30px;
+        font-size: 24px;
+        height: 60px;
+        cursor: pointer;
+        display: block;
+        width: 150px;
+        margin: 0 auto;
+        background-image: linear-gradient(to right, #8AE7A9, #63BBA9);
+        border-style: none;
+        color: white;
+        transition: opacity 0.15s;
+      }
+
+      .submit-button:hover {
+        opacity: 0.8;
+      }
+
+      .submit-button:active {
+        opacity: 0.6;
+      }
     </style>
   </head>
   <body>
@@ -92,7 +114,7 @@
           <p class="sub-title">Stay updated on the latest housing listings near UBC.</p>
           <input type="text" class="field" id="username" name="username" placeholder="Email">
           <input type="password" class="field"id="password" name="password" placeholder="Password">
-          <button type="submit" class="submit" placeholder="Password">Log In</button>
+          <button type="submit" class="submit-button" placeholder="Password">Log In</button>
         </div>
       </form>
     </div>
