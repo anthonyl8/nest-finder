@@ -11,9 +11,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Jersey+25&family=Michroma&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <style>
-
-    </style>
   </head>
   <body>
     <header class="header">
@@ -27,30 +24,42 @@
       </div>
     </header>
 
+    <div class="image-container">
+      <img src = "images/apartment-view.png" class="apartment-view">
+      <div class="nest-finder-overlaid">Browse NestFinder</div>
+    </div>
     <h1 class="search-prompt">Search for an offer</h1>
     <p class="sub-title">Choose from the most advantageous offers</p>
     <div class="search">
       <input type="text" placeholder="Search or enter key words" class="search-bar">
       <button class="search-button">Search</button>
     </div>
-
-    <div class="listing">
-      <div>
-        <img class="house-image" src="images/house-1.png">
+    <p class="sub-title">Filter settings</p>
+    <div class="filter-section">
+      <div class="dropdown">
+        <button id = "dropdown1" class="dropbtn" placeholder="Type"> --Number of Bedrooms-- <strong>v</strong></button>
+        <div class="dropdown-content">
+          <a href="#" data-value = ">1 bedroom">At least 1 bedroom</a>
+          <a href="#" data-value = ">2 bedrooms">At least 2 bedrooms</a>
+          <a href="#" data-value = ">3 bedrooms">At least 3 bedrooms</a>
+        </div>
       </div>
-      <div class="about-house">
-        <p class="listing-title">1 Bed 1 Bath - Apartment Round</p>
-        <p class="desc-title">Description</p>
-        <p class="description">
-          Gastown loft available  1 bed + 1 bath 1 Underground parking  Comes with tv, sofa, bed 
-          Can be unfurnished Same price  Storage locker Available on Feb.15/2025 One year min  
-          Pets are allowed 
-        </p>
-        <div class="external-links">
-          <div><img src="icons/facebook-logo.png" class="external-logo"></div>
-          <div><button class="redirect-button" id="fb-button">$2600/Month</button></div>
-          <div><img src="icons/kijiji-logo.png" class="external-logo"></div>
-          <div><button class="redirect-button" id="kj-button">$2600/Month</button></div>
+      <div class="dropdown">
+        <button id = "dropdown2" class="dropbtn" placeholder="Room Budget"> --Total Room Budget-- <strong>v</strong></button>
+        <div class="dropdown-content">
+          <a href="#" data-value = "<$2000">Less than $2000</a>
+          <a href="#" data-value = "<$2500">Less than $2500</a>
+          <a href="#" data-value = "<$3000">Less than $3000</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <button id = "dropdown3" class="dropbtn" placeholder="Distance from UBC"> --Distance from UBC-- <strong>v</strong></button>
+        <div class="dropdown-content">
+          <a href="#" data-value = "<0.5 km">Within 0.5 km</a>
+          <a href="#" data-value = "<1 km">Within 1 km</a>
+          <a href="#" data-value = "<1.5 km">Within 1.5 km</a>
+          <a href="#" data-value = "<2 km">Within 2 km</a>
+          <a href="#" data-value = "<2.5 km">Within 2.5 km</a>
         </div>
       </div>
     </div>
@@ -68,5 +77,41 @@
         </div>
       </div>
     </footer>
+    <script>
+      /*
+      function ddfunc(i) {
+          dd = document.getElementById(i)
+          dd.classList.toggle("show");
+          dd.textContent = dd.classList.dataset.value;
+      }
+      */
+      document.querySelectorAll('.dropbtn').forEach(button => {
+          button.addEventListener('click', function() {
+              this.nextElementSibling.classList.toggle('show');
+          });
+      });
+
+      document.querySelectorAll('.dropdown-content a').forEach(item => {
+          item.addEventListener('click', function(e) {
+              e.preventDefault();
+              const dropdownButton = this.closest('.dropdown').querySelector('.dropbtn');
+              dropdownButton.textContent = this.dataset.value;
+              this.parentElement.classList.remove('show');
+          });
+      });
+
+      window.onclick = function(event) {
+          if (!event.target.matches('.dropbtn')) {
+              var dropdowns = document.getElementsByClassName("dropdown-content");
+              var i;
+              for (i = 0; i < dropdowns.length; i++) {
+                  var openDropdown = dropdowns[i];
+                  if (openDropdown.classList.contains('show')) {
+                      openDropdown.classList.remove('show');
+                  }
+              }
+          }
+      }
+      </script>
   </body>
 </html>

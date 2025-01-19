@@ -54,7 +54,7 @@ p, h1 {
   color: #fff; 
   padding: 10px 20px;
   font-family: Jersey, sans-serif;
-  font-size: 200px; 
+  font-size: 100px; 
   font-weight: bold;
   text-align: center;
 }
@@ -450,6 +450,7 @@ font-family: Abhaya Libre, Arial, sans-serif;
   border-style: none;
   color: white;
   transition: opacity 0.15s;
+  text-decoration: none;
 }
 
 .submit-button:hover {
@@ -538,6 +539,7 @@ font-family: Abhaya Libre, Arial, sans-serif;
 .search {
   width: 620px;
   margin: 0 auto;
+  padding-bottom: 20px;
 }
 
 .search-bar {
@@ -571,6 +573,65 @@ font-family: Abhaya Libre, Arial, sans-serif;
   opacity: 0.6;
 }
 
+.filter-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 760px;
+  margin: 0 auto;
+}
+
+.dropdown {
+  margin-right: 20px;
+}
+
+.dropbtn {
+  padding: 10px 16px;
+  background-color: white;
+  font-size: 16px;
+  text-align: right;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: black;
+  height: 100%;
+  width: 100%;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  min-width: 235px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  font-size: 16px;
+  font-family: Jersey, sans-serif;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: white;
+}
+
+.dropdown:hover .dropdown-content {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: white;
+}
+
+.show {
+  display: block;
+}
+
 /* Navigation Bar Styling */
 .navbar {
   display: flex;
@@ -597,6 +658,4 @@ font-family: Abhaya Libre, Arial, sans-serif;
 .navbar-icon {
   height: 30px; /* Adjust icon size */
   cursor: pointer;
-}
-
 }
