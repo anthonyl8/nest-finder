@@ -251,17 +251,17 @@ padding-right: 40px;
   margin-bottom: 20px;
 }
 
-.slogan-heading {
-  margin-bottom: 220px;
+#slogan-heading {
+  margin-top: 220px;
   font-family: Abhaya Libre, Arial, sans-serif;
 }
 
 .small-terms {
-margin-top: 5px;
-text-align: center;
-font-size: 15pxpx;
-color: gray;
-margin-bottom: 20px;
+  margin-top: 5px;
+  text-align: center;
+  font-size: 15px;
+  color: gray;
+  margin-bottom: 20px;
 }
 
 
@@ -285,6 +285,10 @@ font-family: Abhaya Libre, Arial, sans-serif;
 
 #continue:active {
   opacity: 0.6;
+}
+
+#slogan-heading {
+  margin-top: 50px;
 }
 
 .wrapper {
