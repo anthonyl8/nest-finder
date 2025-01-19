@@ -570,4 +570,32 @@ font-family: Abhaya Libre, Arial, sans-serif;
 .search-button:active {
   opacity: 0.6;
 }
+
+/* Navigation Bar Styling */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff; /* White background */
+  padding: 10px 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for elevation */
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar-logo img {
+  height: 40px; /* Adjust logo size */
+}
+
+.navbar-icons {
+  display: flex;
+  gap: 15px; /* Spacing between icons */
+}
+
+.navbar-icon {
+  height: 30px; /* Adjust icon size */
+  cursor: pointer;
+}
+
 }
