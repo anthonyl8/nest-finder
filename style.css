@@ -5,11 +5,11 @@
 }
 
 html, body {
-margin: 0;
-padding: 0;
-width: 100%;
-height: 100%;
-}
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  }
 
 p {
   font-family: Abhaya Libre, Arial, sans-serif;
@@ -458,4 +458,73 @@ font-family: Abhaya Libre, Arial, sans-serif;
 
 .submit-button:active {
   opacity: 0.6;
+}
+
+.listing {
+  margin: 30px 50px 0px 50px;
+  display: grid;
+  grid-template-columns: 57% 43%;
+}
+
+.about-house {
+  margin-left: 50px;
+}
+
+.house-image {
+  width: 100%;
+}
+
+.listing-title {
+  font-family: Jersey, sans-serif;
+  font-size: 34px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.desc-title {
+  font-size: 30px;
+  margin-bottom: 15px;
+}
+.description {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.external-links {
+  display: grid;
+  grid-template-columns: 15% 85%;
+}
+
+.external-logo {
+  vertical-align: middle;
+}
+
+.redirect-button {
+  margin-top: 10px;
+  margin-left: 20px;
+  height: 60px;
+  width: 300px;
+  border-style: none;
+  color: white;
+  border-radius: 30px;
+  font-size: 24px;
+  vertical-align: middle;
+  transition: opacity 0.15s;
+}
+
+.redirect-button:hover {
+  opacity: 0.8;
+}
+
+.redirect-button:active {
+  opacity: 0.6
+}
+
+#fb-button {
+  background-color: #6CAEFF;
+}
+
+#kj-button {
+  background-color: #6C79FF;
+  transition: opacity 0.15s;
 }
