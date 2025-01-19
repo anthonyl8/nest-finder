@@ -78,12 +78,8 @@ p, h1 {
   display: block;
   text-align: center;
   margin-bottom: 15px;
-}
-.sub-title {
-  font-size: 30px;
-  display: block;
+  margin-top: 0;
   text-align: center;
-  margin-bottom: 15px;
 }
 
 .join-buttons {
@@ -406,11 +402,33 @@ font-family: Abhaya Libre, Arial, sans-serif;
   border-radius: 50%;  /* Optional: to match the rounded style */
 }
 
+.login-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 100px;
+}
+
 .form-box {
-  margin: 0 auto;
   padding-bottom: 1px;
-  width: 40%;
+  width: 50%;
+  padding: 10px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  font-family: Abhaya Libre, Arial, sans-serif;
+}
+
+.form-box p {
+  text-align: left;
+} 
+
+.form-box button {
+  margin-left: 40px;
+  margin-top: 30px;
+  font-family: Abhaya Libre, Arial, sans-serif;
+}
+
+.sub-title-login {
+  margin-bottom: 30px;
 }
 
 .fields-area {
@@ -422,8 +440,7 @@ font-family: Abhaya Libre, Arial, sans-serif;
   width: 100%;
   font-family: Arial;
   font-size: 20px;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
 .field-name {
@@ -433,6 +450,11 @@ font-family: Abhaya Libre, Arial, sans-serif;
   margin-right: 10px;
 }
 
+.forgot-password-link {
+  text-decoration: none;
+  color: #63BBA9;
+}
+
 .heading {
   margin-top: 0;
   margin-bottom: 0;
@@ -440,10 +462,6 @@ font-family: Abhaya Libre, Arial, sans-serif;
   text-align: center;
 }
 
-.sub-title {
-  margin-top: 0;
-  text-align: center;
-}
 
 .submit-button {
   border-radius: 30px;
@@ -451,8 +469,7 @@ font-family: Abhaya Libre, Arial, sans-serif;
   height: 60px;
   cursor: pointer;
   display: block;
-  width: 150px;
-  margin: 0 auto;
+  width: 90%;
   background-image: linear-gradient(to right, #8AE7A9, #63BBA9);
   border-style: none;
   color: white;
