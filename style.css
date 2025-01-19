@@ -223,38 +223,38 @@ p {
 }
 
 .column {
-width: 10%;
-margin: 30px;
-padding-left: 40px;
-padding-right: 40px;
+  width: 10%;
+  margin: 30px;
+  padding-left: 40px;
+  padding-right: 40px;
 }
 
 
 .icon {
-width: 100px;
-display: block;
+  width: 100px;
+  display: block;
 }
 .reason-title {
-display: block;
-font-family: Jersey, sans-serif;
-font-weight: bold;
-margin-top: 40px;
-margin-bottom: 20px;
+  display: block;
+  font-family: Jersey, sans-serif;
+  font-weight: bold;
+  margin-top: 40px;
+  margin-bottom: 20px;
 }
 .small-terms {
-margin-top: 5px;
-text-align: center;
-font-size: 15pxpx;
-color: gray;
+  margin-top: 5px;
+  text-align: center;
+  font-size: 15pxpx;
+  color: gray;
 }
 #continue {
-background-image: linear-gradient(to right, #8AE7A9, #63BBA9);
-border-style: none;
-color: white;
-transition: opacity 0.15s;
-display: block;
-margin: 0 auto;
-width: 500px;
+  background-image: linear-gradient(to right, #8AE7A9, #63BBA9);
+  border-style: none;
+  color: white;
+  transition: opacity 0.15s;
+  display: block;
+  margin: 0 auto;
+  width: 500px;
 }
 
 #continue:hover {
