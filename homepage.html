@@ -176,14 +176,15 @@
         }
       });
       }
-      // Toggle the notification popup when the bell icon is clicked
-      document.getElementById("bell-icon").addEventListener("click", function () {
-        const notificationPopup = document.getElementById("notification-popup");
-        if (notificationPopup.style.display === "none" || notificationPopup.style.display === "") {
-          notificationPopup.style.display = "block";
-        } else {
-          notificationPopup.style.display = "none";
-        }
+      document.addEventListener("DOMContentLoaded", function () {
+        document.getElementById("bell-icon").addEventListener("click", function () {
+          const notificationPopup = document.getElementById("notification-popup");
+          if (notificationPopup.style.display === "none" || notificationPopup.style.display === "") {
+            notificationPopup.style.display = "block";
+          } else {
+            notificationPopup.style.display = "none";
+          }
+        });
       });
 
     </script>
