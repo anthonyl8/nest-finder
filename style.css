@@ -516,6 +516,14 @@ font-family: Abhaya Libre, Arial, sans-serif;
   margin-bottom: 20px;
 }
 
+.desc-distance {
+  font-size: 24px;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
 .external-links {
   display: grid;
   grid-template-columns: 15% 85%;
