@@ -196,3 +196,64 @@ p {
   height: 40px;
   border-radius: 50%;  /* Optional: to match the rounded style */
 }
+
+.form-box {
+  margin: 0 auto;
+  padding-bottom: 1px;
+  width: 40%;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.fields-area {
+  margin: 20px 20px 20px 20px;
+}
+
+.field {
+  height: 50px;
+  width: 100%;
+  font-family: Arial;
+  font-size: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.field-name {
+  font-family: Abhaya Libre, Arial, sans-serif;
+  font-size: 24px;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.heading {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 60px;
+  text-align: center;
+}
+
+.sub-title {
+  margin-top: 0;
+  text-align: center;
+}
+
+.submit-button {
+  border-radius: 30px;
+  font-size: 24px;
+  height: 60px;
+  cursor: pointer;
+  display: block;
+  width: 150px;
+  margin: 0 auto;
+  background-image: linear-gradient(to right, #8AE7A9, #63BBA9);
+  border-style: none;
+  color: white;
+  transition: opacity 0.15s;
+}
+
+.submit-button:hover {
+  opacity: 0.8;
+}
+
+.submit-button:active {
+  opacity: 0.6;
+}
