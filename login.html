@@ -51,5 +51,23 @@
         </div>
       </div>
     </footer>
+
+    <script>
+        document.getElementById("loginForm").addEventListener("submit", function(event) {
+          event.preventDefault(); 
+  
+          const username = document.getElementById("username").value;
+          const password = document.getElementById("password").value;
+  
+          const correctUsername = "123"; 
+          const correctPassword = "123"; 
+  
+          if (username === correctUsername && password === correctPassword) {
+            window.location.href = "housepage.html";
+          } else {
+            alert("Incorrect username or password. Please try again.");
+          }
+        });
+      </script>
   </body>
 </html>
