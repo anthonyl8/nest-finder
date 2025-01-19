@@ -728,3 +728,20 @@ font-family: Abhaya Libre, Arial, sans-serif;
 .result-text {
   padding: 10px 14px 10px 14px;
 }
+
+.notification-popup {
+  display: none; /* Hidden by default */
+  position: absolute;
+  top: 50px; /* Adjust to position below the bell icon */
+  right: 0; /* Align to the right */
+  background-color: white;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Add shadow */
+  padding: 10px;
+  z-index: 1000;
+}
+
+.notification-popup img {
+  width: 150px; /* Adjust size of notification image */
+  height: auto;
+}
