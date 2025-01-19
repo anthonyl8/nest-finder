@@ -240,10 +240,15 @@ padding-right: 40px;
 
 
 .icon {
-  width: 75px;
-  filter: invert(100%);
+  width: 80px;
   display: block;
 }
+
+.social-footer {
+  width: 40px;
+  filter: invert(100%);
+}
+
 .reason-title {
   display: block;
   font-family: Jersey, sans-serif;
