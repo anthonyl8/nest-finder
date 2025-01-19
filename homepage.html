@@ -12,7 +12,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Jersey+25&family=Michroma&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  </head>
+</head>
   <body>
     <div class="image-container">
       <img src = "images/apartment-view.png" class="apartment-view">
@@ -27,7 +27,7 @@
       </a>
     </div>
     </div>
-    <p class="heading">Finding Housing as a Student is Tough.</p>
+    <p id="reasons-heading" class="heading">Finding Housing as a Student is Tough.</p>
     
     <div class="reasons-container">
       <span class="column">
@@ -52,10 +52,77 @@
       </span>
     </div>
     <img src="images/apartment-view-2.png" class="apartment-view">
-    <p class="heading">Join NestFinder.</p>
-    <p class="heading">Find Your Dream Residence.</p>
+    <p class="slogan-heading">Join NestFinder and Find your Dream Residence.</p>
+    <!-- <p class="heading">Find Your Dream Residence.</p> -->
     <p class="small-terms">Housing for users is not guaranteed. Terms and Conditions apply.</p>
     <button class="join-button" id="continue">Continue</button>
+
+    <div class="wrapper">
+      <h1>Frequently Asked Questions</h1>
+
+      <div class="faq">
+        <button class="accordian">
+          What is Nest Finder?
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="pannel">
+          <p>
+            Nest Finder is a centralized marketplace where students can find housing listed on multiple other platforms.
+          </p>
+        </div>
+      </div>
+
+      <div class="faq">
+        <button class="accordian">
+          How do I list my property on Nest Finder?
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="pannel">
+          <p>
+            Nest Finder is a centralized marketplace where students can find housing listed on multiple other platforms.
+          </p>
+        </div>
+      </div>
+
+      <div class="faq">
+        <button class="accordian">
+          Can I negotiate the price or terms with the landlord?
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="pannel">
+          <p>
+            Nest Finder is a centralized marketplace where students can find housing listed on multiple other platforms.
+          </p>
+        </div>
+      </div>
+
+      <div class="faq">
+        <button class="accordian">
+          Can I negotiate the price or terms with the landlord?
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="pannel">
+          <p>
+            Nest Finder is a centralized marketplace where students can find housing listed on multiple other platforms.
+          </p>
+        </div>
+      </div>
+
+      <div class="faq">
+        <button class="accordian">
+          Can I negotiate the price or terms with the landlord?
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="pannel">
+          <p>
+            Nest Finder is a centralized marketplace where students can find housing listed on multiple other platforms.
+          </p>
+        </div>
+      </div>
+    </div>
+   
+
+
 
     <footer class="footer">
       <div class="footer-content">
@@ -73,5 +140,26 @@
     </footer>
 
     </div>
+
+    <script>
+      var acc = document.getElementsByClassName("accordian");
+      var i;
+
+      for(i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function()
+      {
+        this.classList.toggle("active");
+        this.parentElement.classList.toggle("active");
+
+        var pannel = this.nextElementSibling;
+
+        if (pannel.style.display === "block") {
+          pannel.style.display = "none";
+        } else {
+          pannel.style.display = "block";
+        }
+      });
+      }
+    </script>
   </body>
 </html>

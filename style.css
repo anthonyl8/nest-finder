@@ -1,3 +1,9 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 html, body {
   margin: 0;
   padding: 0;
@@ -42,6 +48,12 @@ p {
 
 .intro-container {
   margin-top: 100px;
+}
+
+#reasons-heading {
+  opacity: 0; /* Initially hidden */
+  transform: scale(0); /* Start small */
+  animation: grow 3s forwards; /* Animation */
 }
 
 
@@ -108,9 +120,6 @@ p {
   margin-bottom: 0px;
   font-size: 60px;
   text-align: center;
-  opacity: 0; /* Initially hidden */
-  transform: scale(0); /* Start small */
-  animation: grow 3s forwards; /* Animation */
 }
 
 
@@ -137,7 +146,7 @@ p {
 }
 
 .column {
-width: 10%;
+width: 20%;
 margin: 30px;
 padding-left: 40px;
 padding-right: 40px;
@@ -155,12 +164,22 @@ font-weight: bold;
 margin-top: 40px;
 margin-bottom: 20px;
 }
+
+.slogan-heading {
+  margin-bottom: 220px;
+  font-family: Abhaya Libre, Arial, sans-serif;
+}
+
 .small-terms {
 margin-top: 5px;
 text-align: center;
 font-size: 15pxpx;
 color: gray;
+margin-bottom: 20px;
 }
+
+
+
 #continue {
 background-image: linear-gradient(to right, #8AE7A9, #63BBA9);
 border-style: none;
@@ -169,7 +188,10 @@ transition: opacity 0.15s;
 display: block;
 margin: 0 auto;
 width: 500px;
+margin-bottom: 100px;
+font-family: Abhaya Libre, Arial, sans-serif;
 }
+
 
 #continue:hover {
 opacity: 0.8;
@@ -179,6 +201,75 @@ opacity: 0.8;
 opacity: 0.6;
 }
 
+.wrapper {
+  max-width: 75%;
+  margin: auto;
+  font-family: Abhaya Libre, Arial, sans-serif;
+}
+
+.wrapper > h1 {
+  margin: 1.5rem 0;
+  text-align: center;
+  font-family: Abhaya Libre, Arial, sans-serif;
+  text-decoration: none;
+  font-family: Abhaya Libre, Arial, sans-serif;
+}
+
+.wrapper > h1 {
+  letter-spacing: 3px;
+  font-family: Abhaya Libre, Arial, sans-serif;
+}
+
+.accordian {
+  background-color: white;
+  font-family: Abhaya Libre, Arial, sans-serif;
+  color: rgba(0, 0, 0, 0.8);
+  cursor: pointer;
+  font-size: 1.2em;
+  width: 100%;
+  padding: 2rem 2.5rem;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+  display: flex;
+  justify-content: space-between;
+  font-weight: boldx;
+}
+
+.accordian i {
+  font-family: Abhaya Libre, Arial, sans-serif;
+  font-size: 1.6rem;
+}
+
+.active, .accordian:hover {
+  background-color: #f1f7f5;
+}
+
+.pannel {
+  padding: 0 2rem 2.5rem 2rem;
+  background-color: white;
+  overflow: hidden;
+  background-color: #f1f7f5;
+  display: none;
+}
+
+.pannel p {
+  font-family: Abhaya Libre, Arial, sans-serif;
+  color: rgba(0, 0, 0, 0.7);
+  font-size: 1.2rem;
+  line-height: 1.4;
+}
+
+.faq {
+  border: 1px solid rgba(0,0,0, 0.2);
+  margin: 10px 0px;
+  font-family: Abhaya Libre, Arial, sans-serif;
+}
+
+.faq.active {
+  border: none;
+}
+
 .footer {
 background-color: #78C3A6; /* Match the green color */
 padding: 20px;
@@ -186,7 +277,7 @@ display: flex;
 justify-content: space-between;
 align-items: center;
 color: white;
-margin-top: 30px;
+margin-top: 80px;
 height: 75px;
 font-family: "Jersey 25", serif;
 }
