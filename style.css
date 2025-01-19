@@ -733,15 +733,16 @@ font-family: Abhaya Libre, Arial, sans-serif;
   display: none; /* Hidden by default */
   position: absolute;
   top: 50px; /* Adjust to position below the bell icon */
-  right: 0; /* Align to the right */
-  background-color: white;
+  right: 10px; /* Align to the right */
+  background-color: #fff; /* White background */
   border: 1px solid #ccc;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Add shadow */
   padding: 10px;
   z-index: 1000;
 }
 
-.notification-popup img {
-  width: 150px; /* Adjust size of notification image */
-  height: auto;
+.notification-popup p {
+  margin: 0;
+  font-size: 14px;
+  color: #333;
 }
