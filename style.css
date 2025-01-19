@@ -585,7 +585,8 @@ font-family: Abhaya Libre, Arial, sans-serif;
 }
 
 .navbar-logo img {
-  height: 40px; /* Adjust logo size */
+  height: 30px; /* Adjust logo size */
+  image-rendering: auto;
 }
 
 .navbar-icons {
