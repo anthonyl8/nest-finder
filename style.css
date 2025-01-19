@@ -25,6 +25,7 @@ p {
     margin-bottom: 20px;
   }
 
+  
   .nest-finder-overlaid {
     position: absolute;
     top: 50%; 
@@ -34,10 +35,15 @@ p {
     color: #fff; 
     padding: 10px 20px;
     font-family: Jersey, sans-serif;
-    font-size: 70px; 
+    font-size: px; 
     font-weight: bold;
     text-align: center;
   }
+
+  .intro-container {
+    margin-top: 100px;
+  }
+
 
   .sub-title {
     font-size: 30px;
@@ -98,7 +104,7 @@ p {
   }
 
   .heading {
-    margin-top: 0;
+    margin-top: 150px;
     margin-bottom: 0px;
     font-size: 60px;
     text-align: center;
@@ -112,9 +118,11 @@ p {
   }
 
   .reason-block {
-    margin-top: 25px;
+    /* margin-top: 25px;
     margin-bottom: 20px;
-    width: 95%;
+    width: 95%; */
+    width: 30%;
+    margin-top: 70px;
   }
 
   .icon {
