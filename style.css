@@ -54,7 +54,7 @@ p, h1 {
   color: #fff; 
   padding: 10px 20px;
   font-family: Jersey, sans-serif;
-  font-size: 200px; 
+  font-size: 100px; 
   font-weight: bold;
   text-align: center;
 }
@@ -450,6 +450,7 @@ font-family: Abhaya Libre, Arial, sans-serif;
   border-style: none;
   color: white;
   transition: opacity 0.15s;
+  text-decoration: none;
 }
 
 .submit-button:hover {
@@ -538,6 +539,7 @@ font-family: Abhaya Libre, Arial, sans-serif;
 .search {
   width: 620px;
   margin: 0 auto;
+  padding-bottom: 20px;
 }
 
 .search-bar {
@@ -569,5 +571,4 @@ font-family: Abhaya Libre, Arial, sans-serif;
 
 .search-button:active {
   opacity: 0.6;
-}
 }
