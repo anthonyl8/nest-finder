@@ -1,10 +1,17 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
 p {
     font-family: Abhaya Libre, Arial, sans-serif;
   }
 
   .image-container {
     position: relative;
-    display: inline-block;
+    display: block;
   }
 
   .image-container img {
@@ -142,42 +149,6 @@ p {
   #continue:active {
     opacity: 0.6;
   }
-
-  .footer-container {
-    background-color: #61C09A;
-    padding: 10px;
-    color: #fff;
-    display: flex;
-    padding-left: 40px;
-    margin-top: 20px;
-    justify-content: flex-end;
-
-  }
-
-  .footer-title {
-    font-size: 50px;
-    font-family: "Jersey 25", serif;
-  }
-
-
-  .social-container {
-    margin-left: auto; 
-    margin-right: 0;
-  }
-
-  .social-footer {
-    width: 50px;
-    height: 50px;
-  }
-
-  #ubc-footer {
-    filter: grayscale(100%) brightness(200%) contrast(100%);
-    margin-left: auto; 
-    margin-right: 0;
-  } 
-
-
-
 
   .footer {
     background-color: #78C3A6; /* Match the green color */
