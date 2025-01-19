@@ -38,7 +38,7 @@
         </form>
 
         <a href="browsepage.html" style="text-decoration: none;">
-          <button type="submit" class="submit-button" placeholder="Password">Log In</button>
+          <button type="submit" class="submit-button" placeholder="Password" onclick="auth(event)">Log In</button>
         </a>
       </div>
     </div>
@@ -60,21 +60,20 @@
     </footer>
 
     <script>
-        document.getElementById("loginForm").addEventListener("submit", function(event) {
-          event.preventDefault(); 
-  
-          const username = document.getElementById("username").value;
-          const password = document.getElementById("password").value;
-  
-          const correctUsername = "123"; 
-          const correctPassword = "123"; 
-  
-          if (username === correctUsername && password === correctPassword) {
-            window.location.href = "housepage.html";
-          } else {
-            alert("Incorrect username or password. Please try again.");
-          }
-        });
-      </script>
+        function auth(event) {
+            event.preventDefault();
+
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+
+            if (username == '123' && password == '123') {
+                window.location.assign('housepage.html');
+                alert("Login successful!");
+            } else {
+                alert("Login failed!");
+                return;
+            }
+        }
+    </script>
   </body>
 </html>
