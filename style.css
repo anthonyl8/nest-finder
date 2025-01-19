@@ -486,7 +486,7 @@ font-family: Abhaya Libre, Arial, sans-serif;
 }
 
 .listing {
-  margin: 30px 50px 0px 50px;
+  margin: 30px 50px 20px 50px;
   display: grid;
   grid-template-columns: 57% 43%;
 }
@@ -726,4 +726,11 @@ font-family: Abhaya Libre, Arial, sans-serif;
 
 .result-text {
   padding: 10px 14px 10px 14px;
+}
+
+.more-listings {
+  display: grid;
+  width: 90%;
+  margin: 0 auto;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
 }
