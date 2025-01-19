@@ -28,7 +28,7 @@
       </a>
     </div>
     </div>
-    <p class="heading">Finding Housing as a Student is Tough.</p>
+    <p id="reasons-heading" class="heading">Finding Housing as a Student is Tough.</p>
     
     <div class="reasons-container">
       <span class="column">
@@ -53,10 +53,77 @@
       </span>
     </div>
     <img src="images/apartment-view-2.png" class="apartment-view">
-    <p class="heading">Join NestFinder.</p>
-    <p class="heading">Find Your Dream Residence.</p>
+    <p id="slogan-heading" class="heading">Join NestFinder and Find your Dream Residence.</p>
+    <!-- <p class="heading">Find Your Dream Residence.</p> -->
     <p class="small-terms">Housing for users is not guaranteed. Terms and Conditions apply.</p>
     <button class="join-button" id="continue">Continue</button>
+
+    <div class="wrapper">
+      <h1>Frequently Asked Questions</h1>
+
+      <div class="faq">
+        <button class="accordian">
+          What is Nest Finder?
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="pannel">
+          <p>
+            Nest Finder is a centralized marketplace where students can find housing listed on multiple other platforms.
+          </p>
+        </div>
+      </div>
+
+      <div class="faq">
+        <button class="accordian">
+          How do I list my property on Nest Finder?
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="pannel">
+          <p>
+            Nest Finder is a centralized marketplace where students can find housing listed on multiple other platforms.
+          </p>
+        </div>
+      </div>
+
+      <div class="faq">
+        <button class="accordian">
+          Can I negotiate the price or terms with the landlord?
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="pannel">
+          <p>
+            Nest Finder is a centralized marketplace where students can find housing listed on multiple other platforms.
+          </p>
+        </div>
+      </div>
+
+      <div class="faq">
+        <button class="accordian">
+          Can I negotiate the price or terms with the landlord?
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="pannel">
+          <p>
+            Nest Finder is a centralized marketplace where students can find housing listed on multiple other platforms.
+          </p>
+        </div>
+      </div>
+
+      <div class="faq">
+        <button class="accordian">
+          Can I negotiate the price or terms with the landlord?
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="pannel">
+          <p>
+            Nest Finder is a centralized marketplace where students can find housing listed on multiple other platforms.
+          </p>
+        </div>
+      </div>
+    </div>
+   
+
+
 
     <footer class="footer">
       <div class="footer-content">
@@ -85,5 +152,26 @@
 
     </header>
     </div>
+
+    <script>
+      var acc = document.getElementsByClassName("accordian");
+      var i;
+
+      for(i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function()
+      {
+        this.classList.toggle("active");
+        this.parentElement.classList.toggle("active");
+
+        var pannel = this.nextElementSibling;
+
+        if (pannel.style.display === "block") {
+          pannel.style.display = "none";
+        } else {
+          pannel.style.display = "block";
+        }
+      });
+      }
+    </script>
   </body>
 </html>
