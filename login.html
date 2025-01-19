@@ -10,21 +10,36 @@
     <link rel= "stylesheet" href="style.css">
   </head>
   <body>
+    <header class="navbar">
+      <div class="navbar-logo">
+        <a href="homepage.html"><img src="icons/NestFinder.png" alt="NestFinder Logo"></a>
+      </div>
+    
+      <div class="navbar-icons">
+        <img src="icons/Bell.png" alt="Notification" class="navbar-icon">
+        <img src="icons/user-icon.png" alt="User Profile" class="navbar-icon">
+      </div>
+    </header>
+
     <div class="image-container">
       <img src = "images/apartment-view.png" class="apartment-view">
       <div class="nest-finder-overlaid">Login to NestFinder</div>
     </div>
-    <div class="form-box">
-      <form>
-        <div class="fields-area">
-          <p class="heading">Sign in</p>
-          <p class="sub-title">Stay updated on the latest housing listings near UBC.</p>
-          <input type="text" class="field" id="username" name="username" placeholder="Email">
-          <input type="password" class="field"id="password" name="password" placeholder="Password">
-          <button type="submit" class="submit-button" placeholder="Password">Log In</button>
-        </div>
-      </form>
+    <div class="login-container">
+      <div class="form-box">
+        <form>
+          <div class="fields-area">
+            <p class="heading">Sign in</p>
+            <p class="sub-title-login">Stay updated on the latest housing listings near UBC.</p>
+            <input type="text" class="field" id="username" name="username" placeholder="Email">
+            <input type="password" class="field"id="password" name="password" placeholder="Password">
+            <a class="forgot-password-link" href="https://portal.nwplus.io"><p class="forgot-password">forgot password?</p></a>
+            <button type="submit" class="submit-button" placeholder="Password">Log In</button>
+          </div>
+        </form>
+      </div>
     </div>
+    
 
     <footer class="footer">
       <div class="footer-content">
@@ -33,12 +48,30 @@
           <p>Follow us to stay updated on upcoming events and changes!</p>
         </div>
         <div class="footer-icons">
-          <a href="https://portal.nwplus.io" target="_blank"><img src="icons/linkedin-logo.png" alt="LinkedIn Icon" class="icon"></a>
-          <a href="https://portal.nwplus.io" target="_blank"><img src="icons/facebook-logo.png" alt="Facebook Icon" class="icon"></a>
-          <a href="https://portal.nwplus.io" target="_blank"><img src="icons/tiktok-logo.png" alt="TikTok Icon" class="icon"></a>
-          <a href="https://portal.nwplus.io" target="_blank"><img src="icons/instagram-logo.png" alt="Instagram Icon" class="icon"></a>
+          <a href="https://portal.nwplus.io" target="_blank"><img src="icons/linkedin-footer.png" alt="LinkedIn Icon" class="social-footer"></a>
+          <a href="https://portal.nwplus.io" target="_blank"><img src="icons/facebook-footer.png" alt="Facebook Icon" class="social-footer"></a>
+          <a href="https://portal.nwplus.io" target="_blank"><img src="icons/tiktok-footer.png" alt="TikTok Icon" class="social-footer"></a>
+          <a href="https://portal.nwplus.io" target="_blank"><img src="icons/instagram-footer.png" alt="Instagram Icon" class="social-footer"></a>
         </div>
       </div>
     </footer>
+
+    <script>
+        document.getElementById("loginForm").addEventListener("submit", function(event) {
+          event.preventDefault(); 
+  
+          const username = document.getElementById("username").value;
+          const password = document.getElementById("password").value;
+  
+          const correctUsername = "123"; 
+          const correctPassword = "123"; 
+  
+          if (username === correctUsername && password === correctPassword) {
+            window.location.href = "housepage.html";
+          } else {
+            alert("Incorrect username or password. Please try again.");
+          }
+        });
+      </script>
   </body>
 </html>
