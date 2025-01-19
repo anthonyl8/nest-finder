@@ -11,7 +11,7 @@ html, body {
   height: 100%;
   }
 
-p {
+p, h1 {
   font-family: Abhaya Libre, Arial, sans-serif;
 }
 
@@ -510,6 +510,7 @@ font-family: Abhaya Libre, Arial, sans-serif;
   font-size: 24px;
   vertical-align: middle;
   transition: opacity 0.15s;
+  cursor: pointer;
 }
 
 .redirect-button:hover {
@@ -527,4 +528,46 @@ font-family: Abhaya Libre, Arial, sans-serif;
 #kj-button {
   background-color: #6C79FF;
   transition: opacity 0.15s;
+}
+
+.search-prompt {
+  font-size: 55px;
+  text-align: center;
+}
+
+.search {
+  width: 620px;
+  margin: 0 auto;
+}
+
+.search-bar {
+  padding: 10px 15px 10px 15px;
+  width: 500px;
+  height: 60px;
+  border-radius: 30px;
+  font-size: 20px;
+  border-style: solid;
+  border-width: 1px;
+  margin-right: 10px
+}
+
+.search-button {
+  background-image: linear-gradient(to right, #8AE7A9, #63BBA9);
+  height: 60px;
+  width: 100px;
+  border-style: none;
+  border-radius: 10px;
+  font-size: 20px;
+  color: white;
+  cursor: pointer;
+  transition: opacity 0.15s;
+}
+
+.search-button:hover {
+  opacity: 0.8;
+}
+
+.search-button:active {
+  opacity: 0.6;
+}
 }
