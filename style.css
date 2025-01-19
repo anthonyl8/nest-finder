@@ -364,7 +364,7 @@ font-family: Abhaya Libre, Arial, sans-serif;
 
 .footer {
   background-color: #78C3A6; /* Match the green color */
-  padding: 20px;
+  padding: 100px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -383,6 +383,7 @@ font-family: Abhaya Libre, Arial, sans-serif;
 .footer-text h1 {
   margin: 0;
   font-size: 2em;
+  font-weight: bold;
 }
 
 .footer-text p {
@@ -439,7 +440,7 @@ font-family: Abhaya Libre, Arial, sans-serif;
   height: 50px;
   width: 100%;
   font-family: Arial;
-  font-size: 20px;
+  font-size: 15px;
   margin-bottom: 15px;
 }
 
