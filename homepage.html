@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
   <head>
     <title>
@@ -8,20 +9,35 @@
     <link href="https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;600;700;800&family=Jersey+25&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel= "stylesheet" href="style.css">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Jersey+25&family=Michroma&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-</head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+25&family=Michroma&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
   <body>
+    <header class="navbar">
+      <div class="navbar-logo">
+        <a href="homepage.html"><img src="icons/NestFinder.png" alt="NestFinder Logo"></a>
+      </div>
+    
+      <div class="navbar-icons">
+        <img src="icons/Bell.png" alt="Notification" class="navbar-icon">
+        <div class="notification-popup" id="notification-popup">
+          <img src="icons/notification.png" alt=""User Profile" class="navbar-icon">
+        </div>
+        <img src="icons/user-icon.png" alt="User Profile" class="navbar-icon">
+      </div>
+    </header>
     <div class="image-container">
       <img src = "images/apartment-view.png" class="apartment-view">
       <div class="nest-finder-overlaid">NestFinder</div>
     </div>
     <div class="intro-container">
       <p class="sub-title">the &#35;1 place to find student housing</p>
-    <div class="join-buttons">
+    <a href="browsepage.html">
+      <div class="join-buttons">
       <button class="join-button" id="sign-up">Try NestFinder for Free</button>
+    </a>
       <a href="login.html">
         <button class="join-button" id="log-in">Have an account?</button>
       </a>
@@ -52,10 +68,10 @@
       </span>
     </div>
     <img src="images/apartment-view-2.png" class="apartment-view">
-    <p class="slogan-heading">Join NestFinder and Find your Dream Residence.</p>
+    <p id="slogan-heading" class="heading">Join NestFinder and Find your Dream Residence.</p>
     <!-- <p class="heading">Find Your Dream Residence.</p> -->
     <p class="small-terms">Housing for users is not guaranteed. Terms and Conditions apply.</p>
-    <button class="join-button" id="continue">Continue</button>
+    <a href="browsepage.html" style="text-decoration: none;"><button class="join-button" id="continue">Continue</button></a>
 
     <div class="wrapper">
       <h1>Frequently Asked Questions</h1>
@@ -131,14 +147,14 @@
           <p>Follow us to stay updated on upcoming events and changes!</p>
         </div>
         <div class="footer-icons">
-          <a href="https://portal.nwplus.io" target="_blank"><img src="icons/linkedin-logo.png" alt="LinkedIn Icon" class="icon"></a>
-          <a href="https://portal.nwplus.io" target="_blank"><img src="icons/facebook-logo.png" alt="Facebook Icon" class="icon"></a>
-          <a href="https://portal.nwplus.io" target="_blank"><img src="icons/tiktok-logo.png" alt="TikTok Icon" class="icon"></a>
-          <a href="https://portal.nwplus.io" target="_blank"><img src="icons/instagram-logo.png" alt="Instagram Icon" class="icon"></a>
+          <a href="https://portal.nwplus.io" target="_blank"><img src="icons/linkedin-footer.png" alt="LinkedIn Icon" class="social-footer"></a>
+          <a href="https://portal.nwplus.io" target="_blank"><img src="icons/facebook-footer.png" alt="Facebook Icon" class="social-footer"></a>
+          <a href="https://portal.nwplus.io" target="_blank"><img src="icons/tiktok-footer.png" alt="TikTok Icon" class="social-footer"></a>
+          <a href="https://portal.nwplus.io" target="_blank"><img src="icons/instagram-footer.png" alt="Instagram Icon" class="social-footer"></a>
         </div>
       </div>
     </footer>
-
+    
     </div>
 
     <script>
@@ -160,6 +176,17 @@
         }
       });
       }
+      document.addEventListener("DOMContentLoaded", function () {
+        document.getElementById("bell-icon").addEventListener("click", function () {
+          const notificationPopup = document.getElementById("notification-popup");
+          if (notificationPopup.style.display === "none" || notificationPopup.style.display === "") {
+            notificationPopup.style.display = "block";
+          } else {
+            notificationPopup.style.display = "none";
+          }
+        });
+      });
+
     </script>
   </body>
 </html>
