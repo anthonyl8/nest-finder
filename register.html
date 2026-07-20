@@ -14,7 +14,7 @@
       <div class="navbar-logo">
         <a href="homepage.html"><img src="icons/NestFinder.png" alt="NestFinder Logo"></a>
       </div>
-    
+
       <div class="navbar-icons">
         <img src="icons/Bell.png" alt="Notification" class="navbar-icon">
         <img src="icons/user-icon.png" alt="User Profile" class="navbar-icon">
@@ -23,23 +23,24 @@
 
     <div class="image-container">
       <img src = "images/apartment-view.png" class="apartment-view">
-      <div class="nest-finder-overlaid">Login to NestFinder</div>
+      <div class="nest-finder-overlaid">Join NestFinder</div>
     </div>
     <div class="login-container">
       <div class="form-box">
-        <form onsubmit="return auth(event)">
+        <form onsubmit="return handleRegister(event)">
           <div class="fields-area">
-            <p class="heading">Sign in</p>
-            <p class="sub-title-login">Stay updated on the latest housing listings near UBC.</p>
-            <input type="text" class="field" id="username" name="username" placeholder="Email">
-            <input type="password" class="field"id="password" name="password" placeholder="Password">
-            <a class="forgot-password-link" href="register.html"><p class="forgot-password">New to NestFinder? Register now!</p></a>
+            <p class="heading">Register</p>
+            <p class="sub-title-login">Create an account to stay updated on the latest housing listings near UBC.</p>
+            <input type="text" class="field" id="email" name="email" placeholder="Email">
+            <input type="password" class="field" id="password" name="password" placeholder="Password">
+            <input type="password" class="field" id="confirm-password" name="confirm-password" placeholder="Confirm Password">
+            <a class="forgot-password-link" href="login.html"><p class="forgot-password">Already have an account? Log in!</p></a>
           </div>
-          <button type="submit" class="submit-button">Log In</button>
+          <button type="submit" class="submit-button">Register</button>
         </form>
       </div>
     </div>
-    
+
 
     <footer class="footer">
       <div class="footer-content">
@@ -59,18 +60,28 @@
     <script src="auth.js"></script>
     <script src="navbar-auth.js"></script>
     <script>
-        function auth(event) {
+        function handleRegister(event) {
             event.preventDefault();
 
-            var username = document.getElementById("username").value;
+            var email = document.getElementById("email").value;
             var password = document.getElementById("password").value;
+            var confirmPassword = document.getElementById("confirm-password").value;
 
-            var result = Auth.login(username, password);
-            if (result.ok) {
-                window.location.assign('browsepage.html');
-            } else {
-                alert(result.error);
+            if (password !== confirmPassword) {
+                alert("Passwords do not match.");
+                return false;
             }
+
+            var result = Auth.register(email, password);
+            if (!result.ok) {
+                alert(result.error);
+                return false;
+            }
+
+            // Automatically sign the new user in, then send them to browsing.
+            Auth.login(email, password);
+            alert("Account created! Welcome to NestFinder.");
+            window.location.assign("browsepage.html");
             return false;
         }
     </script>
