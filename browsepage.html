@@ -2,7 +2,18 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>House</title>
+    <title>Browse NestFinder</title>
+    <script>
+      // Browsing requires an account. Redirect to login before anything renders
+      // if there is no active session.
+      (function () {
+        try {
+          if (!localStorage.getItem("nestfinder_session")) {
+            window.location.replace("login.html");
+          }
+        } catch (e) {}
+      })();
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;600;700;800&family=Jersey+25&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
@@ -64,6 +75,11 @@
         </div>
       </div>
     </div>
+    <div class="results-bar">
+      <span id="results-count"></span>
+      <a href="#" id="reset-filters">Clear filters</a>
+    </div>
+    <div class="results"></div>
     <footer class="footer">
       <div class="footer-content">
         <div class="footer-text">
@@ -78,63 +94,8 @@
         </div>
       </div>
     </footer>
-    <script>
-      /*
-      function ddfunc(i) {
-          dd = document.getElementById(i)
-          dd.classList.toggle("show");
-          dd.textContent = dd.classList.dataset.value;
-      }
-      */
-      document.querySelectorAll('.dropbtn').forEach(button => {
-          button.addEventListener('click', function() {
-              this.nextElementSibling.classList.toggle('show');
-          });
-      });
-
-      // Track the selected filter values so Search can pass them to the results page.
-      var selectedFilters = {};
-      document.querySelectorAll('.dropdown-content a').forEach(item => {
-          item.addEventListener('click', function(e) {
-              e.preventDefault();
-              const dropdown = this.closest('.dropdown');
-              const dropdownButton = dropdown.querySelector('.dropbtn');
-              dropdownButton.textContent = this.dataset.value;
-              selectedFilters[dropdownButton.id] = this.dataset.value;
-              this.parentElement.classList.remove('show');
-          });
-      });
-
-      // Build the results-page URL from the keyword box and any selected filters.
-      function goToResults() {
-          var params = new URLSearchParams();
-          var keyword = document.querySelector('.search-bar').value.trim();
-          if (keyword) params.set('q', keyword);
-          if (selectedFilters.dropdown1) params.set('beds', selectedFilters.dropdown1);
-          if (selectedFilters.dropdown2) params.set('price', selectedFilters.dropdown2);
-          if (selectedFilters.dropdown3) params.set('dist', selectedFilters.dropdown3);
-          var query = params.toString();
-          window.location.assign('resultspage.html' + (query ? '?' + query : ''));
-      }
-
-      document.querySelector('.search-button').addEventListener('click', goToResults);
-      document.querySelector('.search-bar').addEventListener('keydown', function(e) {
-          if (e.key === 'Enter') { e.preventDefault(); goToResults(); }
-      });
-
-      window.onclick = function(event) {
-          if (!event.target.matches('.dropbtn')) {
-              var dropdowns = document.getElementsByClassName("dropdown-content");
-              var i;
-              for (i = 0; i < dropdowns.length; i++) {
-                  var openDropdown = dropdowns[i];
-                  if (openDropdown.classList.contains('show')) {
-                      openDropdown.classList.remove('show');
-                  }
-              }
-          }
-      }
-      </script>
+    <script src="listings.js"></script>
+    <script src="results.js"></script>
     <script src="auth.js"></script>
     <script src="navbar-auth.js"></script>
   </body>
