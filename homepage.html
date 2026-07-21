@@ -23,9 +23,6 @@
     
       <div class="navbar-icons">
         <img src="icons/Bell.png" alt="Notification" class="navbar-icon">
-        <div class="notification-popup" id="notification-popup">
-          <img src="icons/notification.png" alt=""User Profile" class="navbar-icon">
-        </div>
         <img src="icons/user-icon.png" alt="User Profile" class="navbar-icon">
       </div>
     </header>
@@ -173,17 +170,6 @@
         }
       });
       }
-      document.addEventListener("DOMContentLoaded", function () {
-        document.getElementById("bell-icon").addEventListener("click", function () {
-          const notificationPopup = document.getElementById("notification-popup");
-          if (notificationPopup.style.display === "none" || notificationPopup.style.display === "") {
-            notificationPopup.style.display = "block";
-          } else {
-            notificationPopup.style.display = "none";
-          }
-        });
-      });
-
     </script>
     <script src="auth.js"></script>
     <script src="navbar-auth.js"></script>

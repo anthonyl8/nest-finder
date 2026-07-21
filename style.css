@@ -737,24 +737,6 @@ font-family: Abhaya Libre, Arial, sans-serif;
   padding: 10px 14px 10px 14px;
 }
 
-.notification-popup {
-  display: none; /* Hidden by default */
-  position: absolute;
-  top: 50px; /* Adjust to position below the bell icon */
-  right: 10px; /* Align to the right */
-  background-color: #fff; /* White background */
-  border: 1px solid #ccc;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Add shadow */
-  padding: 10px;
-  z-index: 1000;
-}
-
-.notification-popup p {
-  margin: 0;
-  font-size: 14px;
-  color: #333;
-}
-
 .more-listings {
   display: grid;
   width: 90%;
@@ -777,13 +759,60 @@ font-family: Abhaya Libre, Arial, sans-serif;
   font-family: Roboto, Arial, sans-serif;
 }
 
-.navbar-user {
-  font-size: 14px;
-  color: #333;
-  max-width: 180px;
-  overflow: hidden;
-  text-overflow: ellipsis;
+.navbar-item {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+.navbar-box {
+  position: absolute;
+  top: calc(100% + 14px);
+  right: 0;
+  min-width: 210px;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  padding: 16px 18px;
+  z-index: 1100;
+  display: none;
+  font-family: Roboto, Arial, sans-serif;
+}
+
+.navbar-box.show {
+  display: block;
+}
+
+/* Notification box: wide enough that the message never wraps. */
+.navbar-box-notif {
+  min-width: 260px;
+}
+
+.navbar-box-notif .navbar-box-text {
   white-space: nowrap;
+}
+
+.navbar-box-text {
+  margin: 0 0 12px 0;
+  padding-right: 14px;
+  font-size: 15px;
+  color: #333;
+  word-break: break-all;
+}
+
+.navbar-box-close {
+  position: absolute;
+  top: 6px;
+  right: 10px;
+  font-size: 20px;
+  line-height: 1;
+  color: #888;
+  cursor: pointer;
+}
+
+.navbar-box-close:hover {
+  color: #333;
 }
 
 .navbar-auth-btn {
