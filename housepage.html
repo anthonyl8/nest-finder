@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="utf-8">
     <title>House</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -39,7 +40,7 @@
         <div class="external-links">
           <div><img src="icons/facebook-logo.png" class="external-logo"></div>
           <div>
-            <a href="https://www.facebook.com/share/196dEAFhPW/" target="_blank">
+            <a href="https://www.facebook.com/share/196dEAFhPW/" target="_blank" id="fb-link">
               <button class="redirect-button" id="fb-button">$2600/Month</button>
             </a>
           </div>
@@ -49,48 +50,7 @@
       </div>
     </div>
     <p class="sub-title">More Listings: </p>
-    <div class="more-listings">
-      <a class="listing-link" href="housepage.html" target="_blank">
-        <div class="result-box">
-          <img class="result-img" src="images/result-img-2.png">
-          <div class="result-text">
-            <p class="result-heading">2 Bed/2 Bath Apartment</p>
-            <p class="result-price">from <u><strong>$4,100</strong></u> a month</p>
-            <p class="result-distance">~1.5 km from UBC</p>
-          </div>
-        </div>
-      </a>
-      <a class="listing-link" href="housepage.html" target="_blank">
-        <div class="result-box">
-          <img class="result-img" src="images/result-img-3.png">
-          <div class="result-text">
-            <p class="result-heading">1 Bed 1 Bath - Apartment</p>
-            <p class="result-price">from <u><strong>$2,200</strong> </u>a month</p>
-            <p class="result-distance">~0.5 km from UBC</p>
-          </div>
-        </div>
-      </a>
-      <a class="listing-link" href="housepage.html" target="_blank">
-        <div class="result-box">
-          <img class="result-img" src="images/result-img-4.jpeg">
-          <div class="result-text">
-            <p class="result-heading">2 Beds 2 Baths House</p>
-            <p class="result-price">from <u><strong>$3,200</strong> </u>a month</p>
-            <p class="result-distance">~0.5 km from UBC</p>
-          </div>
-        </div>
-      </a>
-      <a class="listing-link" href="housepage.html" target="_blank">
-        <div class="result-box">
-          <img class="result-img" src="images/result-img-5.jpeg">
-          <div class="result-text">
-            <p class="result-heading">1 Bed 1 Bath - House</p>
-            <p class="result-price">from <u><strong>$750</strong> </u>a month</p>
-            <p class="result-distance">~1.2 km from UBC</p>
-          </div>
-        </div>
-      </a>
-    </div>
+    <div class="more-listings"></div>
     <footer class="footer">
       <div class="footer-content">
         <div class="footer-text">
@@ -105,6 +65,8 @@
         </div>
       </div>
     </footer>
+    <script src="listings.js"></script>
+    <script src="house.js"></script>
     <script src="auth.js"></script>
     <script src="navbar-auth.js"></script>
   </body>

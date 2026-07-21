@@ -42,7 +42,7 @@
 
   function listingCard(listing) {
     return (
-      '<a class="listing-link" href="housepage.html" target="_blank">' +
+      '<a class="listing-link" href="housepage.html?id=' + listing.id + '" target="_blank">' +
       '<div class="result-box">' +
       '<img class="result-img" src="' + listing.image + '" alt="' + listing.title + '">' +
       '<div class="result-text">' +

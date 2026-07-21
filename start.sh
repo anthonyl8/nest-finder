@@ -23,5 +23,5 @@ echo "Press Ctrl+C to stop."
   fi
 ) &
 
-# Start a static file server in the foreground.
-python3 -m http.server "$PORT"
+# Start a static file server in the foreground (no-cache, so edits show up).
+python3 serve.py "$PORT"
