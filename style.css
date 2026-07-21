@@ -802,3 +802,36 @@ font-family: Abhaya Libre, Arial, sans-serif;
 .navbar-auth-btn:hover {
   opacity: 0.8;
 }
+
+.results-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  margin: 20px auto 0 auto;
+  font-family: Roboto, Arial, sans-serif;
+}
+
+#results-count {
+  font-size: 18px;
+  color: #333;
+}
+
+#reset-filters {
+  color: #63BBA9;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+#reset-filters:hover {
+  text-decoration: underline;
+}
+
+.no-results {
+  grid-column: 1 / -1;
+  text-align: center;
+  font-family: Roboto, Arial, sans-serif;
+  font-size: 20px;
+  color: #666;
+  padding: 40px 20px;
+}

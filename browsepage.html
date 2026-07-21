@@ -32,7 +32,7 @@
     <p class="sub-title">Choose from the most advantageous offers</p>
     <div class="search">
       <input type="text" placeholder="Search or enter key words" class="search-bar">
-      <a href="resultspage.html"><button class="search-button">Search</button></a>
+      <button class="search-button">Search</button>
     </div>
     <p class="sub-title">Filter settings</p>
     <div class="filter-section">
@@ -91,13 +91,34 @@
           });
       });
 
+      // Track the selected filter values so Search can pass them to the results page.
+      var selectedFilters = {};
       document.querySelectorAll('.dropdown-content a').forEach(item => {
           item.addEventListener('click', function(e) {
               e.preventDefault();
-              const dropdownButton = this.closest('.dropdown').querySelector('.dropbtn');
+              const dropdown = this.closest('.dropdown');
+              const dropdownButton = dropdown.querySelector('.dropbtn');
               dropdownButton.textContent = this.dataset.value;
+              selectedFilters[dropdownButton.id] = this.dataset.value;
               this.parentElement.classList.remove('show');
           });
+      });
+
+      // Build the results-page URL from the keyword box and any selected filters.
+      function goToResults() {
+          var params = new URLSearchParams();
+          var keyword = document.querySelector('.search-bar').value.trim();
+          if (keyword) params.set('q', keyword);
+          if (selectedFilters.dropdown1) params.set('beds', selectedFilters.dropdown1);
+          if (selectedFilters.dropdown2) params.set('price', selectedFilters.dropdown2);
+          if (selectedFilters.dropdown3) params.set('dist', selectedFilters.dropdown3);
+          var query = params.toString();
+          window.location.assign('resultspage.html' + (query ? '?' + query : ''));
+      }
+
+      document.querySelector('.search-button').addEventListener('click', goToResults);
+      document.querySelector('.search-bar').addEventListener('keydown', function(e) {
+          if (e.key === 'Enter') { e.preventDefault(); goToResults(); }
       });
 
       window.onclick = function(event) {
