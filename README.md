@@ -53,7 +53,6 @@ client side, so it's easy to run locally.
 | `style.css` | Site-wide styles |
 | `serve.py` | Small no-cache static file server for local development |
 | `start.sh` | Convenience launcher — starts the server and opens the homepage |
-| `data/houses.json` | Sample scraped marketplace data (reference only; not used by the UI) |
 
 ## Running the app
 
