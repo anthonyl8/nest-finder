@@ -53,6 +53,7 @@ client side, so it's easy to run locally.
 | `style.css` | Site-wide styles |
 | `serve.py` | Small no-cache static file server for local development |
 | `start.sh` | Convenience launcher — starts the server and opens the homepage |
+| `test/` | Automated tests (see [Testing](#testing)) |
 
 ## Running the app
 
@@ -82,6 +83,59 @@ python3 serve.py 8000
 > **Tip:** run the app through the server (`http://localhost`) rather than
 > opening the HTML files directly (`file://`). The server sends no-cache
 > headers, so your latest changes always show up without a hard refresh.
+
+## Testing
+
+The site itself needs no build step, but the tests run on Node (18+) with
+[Vitest](https://vitest.dev) and [jsdom](https://github.com/jsdom/jsdom).
+
+Install the dev dependencies once:
+
+```bash
+npm install
+```
+
+Then run the suite:
+
+```bash
+npm test
+```
+
+Other useful commands:
+
+```bash
+npm run test:watch
+```
+
+```bash
+npm run coverage
+```
+
+`npm run coverage` prints a summary and writes a browsable HTML report to
+`coverage/index.html`.
+
+### How the tests work
+
+The site's scripts are plain `<script>` files rather than modules, so the tests
+reproduce a browser page instead of importing functions:
+
+1. The real page markup is loaded from `browsepage.html` / `housepage.html`
+   (with its `<script>` tags stripped) into a jsdom document — so a renamed
+   class or id in the HTML fails the tests rather than silently breaking the
+   site.
+2. `test/helpers/page.js` evaluates the site's scripts in page order and then
+   fires `DOMContentLoaded`, the same lifecycle a browser gives them. Each load
+   is a fresh evaluation, so filter state never leaks between tests.
+3. `test/setup/storage.js` supplies an in-memory `localStorage`, since accounts
+   and sessions live there.
+
+| Test file | Covers |
+|-----------|--------|
+| `test/auth.test.js` | Registration rules, login, sessions, password hashing |
+| `test/results.test.js` | Browse grid rendering, keyword search, filters, URL parameters, clearing |
+| `test/house.test.js` | Detail page population, `?id=` lookup and fallback, "More Listings" |
+| `test/navbar-auth.test.js` | Notification and profile dropdowns, log in / log out controls |
+| `test/listings.test.js` | Shape and integrity of the listing data |
 
 ## Notes & limitations
 

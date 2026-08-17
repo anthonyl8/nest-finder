@@ -1,0 +1,28 @@
+{
+  "name": "nest-finder",
+  "version": "1.0.0",
+  "description": "NestFinder is a web app that helps students find housing near UBC. It brings listings together in one place so you can search, filter, and compare homes — by number of bedrooms, monthly budget, and distance from campus — instead of hopping between different marketplaces.",
+  "main": "auth.js",
+  "scripts": {
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "coverage": "vitest run --coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anthonyl8/nest-finder.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/anthonyl8/nest-finder/issues"
+  },
+  "homepage": "https://github.com/anthonyl8/nest-finder#readme",
+  "devDependencies": {
+    "@vitest/coverage-v8": "^4.1.10",
+    "jsdom": "^30.0.1",
+    "vitest": "^4.1.10"
+  }
+}
