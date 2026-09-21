@@ -23,11 +23,11 @@ const ROOT = path.resolve(import.meta.dirname, "..", "..");
 // Static import map: every script the pages load. Keeping these as literal
 // imports lets the bundler resolve them and keeps coverage attribution intact.
 const SOURCES = {
-  "auth.js": () => import("../../auth.js"),
-  "house.js": () => import("../../house.js"),
-  "listings.js": () => import("../../listings.js"),
-  "navbar-auth.js": () => import("../../navbar-auth.js"),
-  "results.js": () => import("../../results.js"),
+  "auth.js": () => import("../../js/auth.js"),
+  "house.js": () => import("../../js/house.js"),
+  "listings.js": () => import("../../js/listings.js"),
+  "navbar-auth.js": () => import("../../js/navbar-auth.js"),
+  "results.js": () => import("../../js/results.js"),
 };
 
 /**
@@ -77,7 +77,7 @@ export async function loadScripts(files) {
  * @param {string} file e.g. "browsepage.html"
  */
 export function pageMarkup(file) {
-  const html = fs.readFileSync(path.join(ROOT, file), "utf8");
+  const html = fs.readFileSync(path.join(ROOT, "pages", file), "utf8");
   const parsed = new DOMParser().parseFromString(html, "text/html");
   parsed.querySelectorAll("script").forEach((script) => script.remove());
   return parsed.body.innerHTML;

@@ -5,7 +5,7 @@
 set -e
 
 PORT="${1:-8000}"
-URL="http://localhost:${PORT}/homepage.html"
+URL="http://localhost:${PORT}/pages/homepage.html"
 
 # Serve from the directory this script lives in.
 cd "$(dirname "$0")"

@@ -11,7 +11,13 @@ export default defineConfig({
       provider: "v8",
       reporter: ["text", "html"],
       // Only the site's own scripts — not the test harness or config.
-      include: ["auth.js", "house.js", "listings.js", "navbar-auth.js", "results.js"],
+      include: [
+        "js/auth.js",
+        "js/house.js",
+        "js/listings.js",
+        "js/navbar-auth.js",
+        "js/results.js",
+      ],
     },
   },
 });

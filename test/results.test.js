@@ -52,7 +52,7 @@ describe("results page", () => {
         "~1.3 km from UBC"
       );
       expect(first.querySelector(".result-img").getAttribute("src")).toBe(
-        "images/result-img-1.png"
+        "../images/result-img-1.png"
       );
       expect(first.querySelector(".result-img").getAttribute("alt")).toBe(
         "1 Bed 1 Bath - Apartment Round"

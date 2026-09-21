@@ -79,8 +79,11 @@ describe("listings data", () => {
 
   it("points at an image file that exists in the repo", () => {
     for (const listing of listings) {
-      expect(listing.image).toMatch(/^images\//);
-      expect(fs.existsSync(path.join(ROOT, listing.image)), listing.image).toBe(true);
+      // Image paths are written the way the browser resolves them: relative to
+      // the page that renders them, which lives in pages/.
+      expect(listing.image).toMatch(/^\.\.\/images\//);
+      const onDisk = path.join(ROOT, "pages", listing.image);
+      expect(fs.existsSync(onDisk), listing.image).toBe(true);
     }
   });
 });

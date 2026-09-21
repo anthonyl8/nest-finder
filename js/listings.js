@@ -3,7 +3,8 @@
 // Fields:
 //   id          - unique identifier (used in housepage.html?id=...)
 //   title       - listing headline (searched by keyword)
-//   image       - path to the listing photo (used for both card and detail)
+//   image       - path to the listing photo (used for both card and detail),
+//                 relative to the pages/ folder the HTML lives in
 //   beds        - number of bedrooms
 //   baths       - number of bathrooms
 //   price       - rent per month, in dollars (number)
@@ -16,7 +17,7 @@ window.LISTINGS = [
   {
     id: 1,
     title: "1 Bed 1 Bath - Apartment Round",
-    image: "images/result-img-1.png",
+    image: "../images/result-img-1.png",
     beds: 1,
     baths: 1,
     price: 2600,
@@ -31,7 +32,7 @@ window.LISTINGS = [
   {
     id: 2,
     title: "2 Bed/2 Bath Apartment",
-    image: "images/result-img-2.png",
+    image: "../images/result-img-2.png",
     beds: 2,
     baths: 2,
     price: 4100,
@@ -46,7 +47,7 @@ window.LISTINGS = [
   {
     id: 3,
     title: "1 Bed 1 Bath - Apartment",
-    image: "images/result-img-3.png",
+    image: "../images/result-img-3.png",
     beds: 1,
     baths: 1,
     price: 2200,
@@ -61,7 +62,7 @@ window.LISTINGS = [
   {
     id: 4,
     title: "2 Beds 2 Baths House",
-    image: "images/result-img-4.jpeg",
+    image: "../images/result-img-4.jpeg",
     beds: 2,
     baths: 2,
     price: 3200,
@@ -76,7 +77,7 @@ window.LISTINGS = [
   {
     id: 5,
     title: "1 Bed 1 Bath - House",
-    image: "images/result-img-5.jpeg",
+    image: "../images/result-img-5.jpeg",
     beds: 1,
     baths: 1,
     price: 750,
@@ -91,7 +92,7 @@ window.LISTINGS = [
   {
     id: 6,
     title: "2 Bed 2 Bath Apartment",
-    image: "images/result-img-6.jpeg",
+    image: "../images/result-img-6.jpeg",
     beds: 2,
     baths: 2,
     price: 3400,
@@ -106,7 +107,7 @@ window.LISTINGS = [
   {
     id: 7,
     title: "Fully Furnished 2 Bedroom Upper Level Suite with Balconies",
-    image: "images/result-img-7.jpeg",
+    image: "../images/result-img-7.jpeg",
     beds: 2,
     baths: 1,
     price: 5995,
@@ -121,7 +122,7 @@ window.LISTINGS = [
   {
     id: 8,
     title: "1 Bedroom Suite with City Views and Hotel Amenities",
-    image: "images/result-img-8.jpeg",
+    image: "../images/result-img-8.jpeg",
     beds: 1,
     baths: 1,
     price: 3195,
@@ -136,7 +137,7 @@ window.LISTINGS = [
   {
     id: 9,
     title: "Private Room for Rent",
-    image: "images/result-img-9.jpeg",
+    image: "../images/result-img-9.jpeg",
     beds: 1,
     baths: 1,
     price: 750,

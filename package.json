@@ -2,7 +2,7 @@
   "name": "nest-finder",
   "version": "1.0.0",
   "description": "NestFinder is a web app that helps students find housing near UBC. It brings listings together in one place so you can search, filter, and compare homes — by number of bedrooms, monthly budget, and distance from campus — instead of hopping between different marketplaces.",
-  "main": "auth.js",
+  "main": "js/auth.js",
   "scripts": {
     "test": "vitest run",
     "test:watch": "vitest",

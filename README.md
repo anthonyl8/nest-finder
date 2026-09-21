@@ -38,22 +38,43 @@ client side, so it's easy to run locally.
 
 ## Project structure
 
+Pages live in `pages/`, scripts in `js/`, styles in `css/`, and artwork in
+`icons/` and `images/`:
+
+```
+nest-finder/
+├── index.html  Redirect: sends the server root to pages/homepage.html
+├── pages/      HTML pages
+├── js/         Browser scripts
+├── css/        Stylesheet
+├── icons/      Logos and UI icons
+├── images/     Listing and banner photos
+├── test/       Automated tests
+├── serve.py    Local no-cache static server
+└── start.sh    Launcher (serves the site, opens the homepage)
+```
+
 | File | Purpose |
 |------|---------|
-| `homepage.html` | Landing page: intro, auth-aware buttons, FAQ |
-| `login.html` | Sign in to an existing account |
-| `register.html` | Create a new account |
-| `browsepage.html` | Browse page (login required): banner, search, filters, listing grid |
-| `housepage.html` | House detail view (`housepage.html?id=<id>`) |
-| `auth.js` | Client-side authentication (register / login / logout / session) |
-| `navbar-auth.js` | Navbar behaviour: notification & profile dropdowns, login/logout button |
-| `listings.js` | Housing listing data |
-| `results.js` | Renders the browse grid and drives search + filtering |
-| `house.js` | Renders the house detail page and "More Listings" |
-| `style.css` | Site-wide styles |
+| `index.html` | Redirects the server root to `pages/homepage.html` |
+| `pages/homepage.html` | Landing page: intro, auth-aware buttons, FAQ |
+| `pages/login.html` | Sign in to an existing account |
+| `pages/register.html` | Create a new account |
+| `pages/browsepage.html` | Browse page (login required): banner, search, filters, listing grid |
+| `pages/housepage.html` | House detail view (`housepage.html?id=<id>`) |
+| `js/auth.js` | Client-side authentication (register / login / logout / session) |
+| `js/navbar-auth.js` | Navbar behaviour: notification & profile dropdowns, login/logout button |
+| `js/listings.js` | Housing listing data |
+| `js/results.js` | Renders the browse grid and drives search + filtering |
+| `js/house.js` | Renders the house detail page and "More Listings" |
+| `css/style.css` | Site-wide styles |
 | `serve.py` | Small no-cache static file server for local development |
 | `start.sh` | Convenience launcher — starts the server and opens the homepage |
 | `test/` | Automated tests (see [Testing](#testing)) |
+
+Pages link to each other by bare filename (they share the `pages/` folder) and
+reach everything else with `../` — so `js/listings.js` stores photo paths like
+`../images/result-img-1.png`, the way the page that renders them resolves it.
 
 ## Running the app
 
@@ -65,8 +86,9 @@ From the project folder, run:
 ./start.sh
 ```
 
-This starts a local server and opens `http://localhost:8000/homepage.html` in
-your browser. Press `Ctrl+C` to stop it.
+This starts a local server and opens `http://localhost:8000/pages/homepage.html`
+in your browser. Press `Ctrl+C` to stop it. Plain `http://localhost:8000/` works
+too — the root `index.html` redirects there.
 
 To use a different port:
 
@@ -119,10 +141,10 @@ npm run coverage
 The site's scripts are plain `<script>` files rather than modules, so the tests
 reproduce a browser page instead of importing functions:
 
-1. The real page markup is loaded from `browsepage.html` / `housepage.html`
-   (with its `<script>` tags stripped) into a jsdom document — so a renamed
-   class or id in the HTML fails the tests rather than silently breaking the
-   site.
+1. The real page markup is loaded from `pages/browsepage.html` /
+   `pages/housepage.html` (with its `<script>` tags stripped) into a jsdom
+   document — so a renamed class or id in the HTML fails the tests rather than
+   silently breaking the site.
 2. `test/helpers/page.js` evaluates the site's scripts in page order and then
    fires `DOMContentLoaded`, the same lifecycle a browser gives them. Each load
    is a fresh evaluation, so filter state never leaks between tests.
@@ -144,5 +166,5 @@ reproduce a browser page instead of importing functions:
   browser data removes it. There is no shared user database.
 - **Demo-grade security.** The password hash is a simple, non-cryptographic hash
   suitable for a prototype — not for production use.
-- **Listings are sample data** defined in `listings.js`. Making listings shared
+- **Listings are sample data** defined in `js/listings.js`. Making listings shared
   and persistent across devices would require a real backend with a database.

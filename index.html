@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>NestFinder</title>
+
+    <!-- The site's pages live in pages/. This file exists only so the server
+         root (http://localhost:8000/) lands on the homepage instead of a
+         directory listing. -->
+
+    <!-- Works without JavaScript, and is the fallback if the script below
+         is blocked. -->
+    <meta http-equiv="refresh" content="0; url=pages/homepage.html">
+
+    <script>
+      // `replace` rather than `assign`: the redirect shouldn't leave a history
+      // entry, or Back from the homepage would bounce straight here again.
+      window.location.replace("pages/homepage.html");
+    </script>
+  </head>
+  <body>
+    <p>Redirecting to <a href="pages/homepage.html">NestFinder</a>&hellip;</p>
+  </body>
+</html>

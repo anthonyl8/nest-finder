@@ -24,7 +24,7 @@ describe("house detail page", () => {
       expect(text(".description")).toContain("Affordable 1 bedroom in a shared house");
       expect(text(".desc-distance")).toBe("~1.2 km from UBC");
       expect(document.querySelector(".house-image").getAttribute("src")).toBe(
-        "images/result-img-5.jpeg"
+        "../images/result-img-5.jpeg"
       );
       expect(document.querySelector(".house-image").getAttribute("alt")).toBe(
         "1 Bed 1 Bath - House"
@@ -117,7 +117,7 @@ describe("house detail page", () => {
         "~1.5 km from UBC"
       );
       expect(first.querySelector(".result-img").getAttribute("src")).toBe(
-        "images/result-img-2.png"
+        "../images/result-img-2.png"
       );
     });
 
